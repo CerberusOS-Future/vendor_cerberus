@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/prebuilt/common/etc/init/cerberusos-updates.rc:system/etc/init/cerberusos-updates.rc
+
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/cerberus/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
