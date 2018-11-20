@@ -10,3 +10,7 @@ include vendor/cerberus/config/BoardConfigQcom.mk
 endif
 
 include vendor/cerberus/config/BoardConfigSoong.mk
+
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/config/sysconfig/cerberus_whitelist.xml:system/etc/sysconfig/cerberus_whitelist.xml \
+    vendor/cerberus/config/permissions/privapp-permissions-cerberus.xml:system/etc/permissions/privapp-permissions-cerberus.xml
