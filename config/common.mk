@@ -162,6 +162,17 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/cerberus/overlay/common
 
+# Fonts
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/cerberus/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/cerberus/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf  \
+    vendor/cerberus/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/cerberus/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/cerberus/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+
+ADDITIONAL_FONTS_FILE := vendor/cerberus/fonts/google-sans.xml
+
 # Bootanimation
 ifeq ($(TARGET_BOOTANIMATION_480P),true)
 PRODUCT_COPY_FILES += \
