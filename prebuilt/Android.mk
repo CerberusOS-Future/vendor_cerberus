@@ -113,3 +113,34 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_OVERRIDES_PACKAGES := DeskClock OmniClock DeskClockGoogle
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
+
+#Google Calculator
+include $(CLEAR_VARS)
+LOCAL_MODULE := Calculator
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := common/app/Calculator.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_OVERRIDES_PACKAGES := ExactCalculator
+include $(BUILD_PREBUILT)
+
+#Gboard App
+include $(CLEAR_VARS)
+LOCAL_MODULE := GboardGoPreb
+ifeq ($(TARGET_ARCH),arm64)
+    LOCAL_SRC_FILES := common/app/Gboard/arm64/$(LOCAL_MODULE).apk
+else ifeq ($(TARGET_ARCH),arm)
+    LOCAL_SRC_FILES := common/app/Gboard/arm/$(LOCAL_MODULE).apk
+else ifeq ($(TARGET_ARCH),x86)
+    LOCAL_SRC_FILES := common/app/Gboard/x86/$(LOCAL_MODULE).apk
+else ifeq ($(TARGET_ARCH),x86_64)
+    LOCAL_SRC_FILES := common/app/Gboard/x86_64/$(LOCAL_MODULE).apk
+else
+    $(error "Whoops: TARGET_ARCH isn't defined, so Gboard can't be built!")
+endif
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_OVERRIDES_PACKAGES := LatinIME
+include $(BUILD_PREBUILT)

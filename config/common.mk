@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     Calculator \
-    LatinIME \
+    GboardGoPreb \
     BluetoothExt
 
 # Cerberus OS Extra Packages
@@ -174,8 +174,12 @@ PRODUCT_COPY_FILES += \
     vendor/cerberus/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
+# Some props that we need for the google stuff we're adding
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.ime.height_ratio=1.05 \
+    ro.com.google.ime.emoji_key=false
+
 # Versioning System
-# cerberus first version.
 PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 7
 PRODUCT_VERSION_MAINTENANCE = 1.7
