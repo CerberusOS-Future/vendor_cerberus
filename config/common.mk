@@ -200,7 +200,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     cerberus.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.cerberus.version=$(CERBERUS_VERSION) \
     ro.modversion=$(CERBERUS_MOD_VERSION) \
-    ro.cerberus.buildtype=$(CERBERUS_BUILD_TYPE)
+    ro.cerberus.buildtype=$(CERBERUS_BUILD_TYPE) \
+    ro.cerberus.maintainer=$(CERBERUS_MAINTAINER)
 
 # Google sounds
 include vendor/cerberus/google/GoogleAudio.mk
