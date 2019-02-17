@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     PixelLauncher3 \
 	Lawnchair \
 	MarkupGoogle \
-	WellbeingPrebuilt \
+	WellbeingPrebuilt
  
 
 # Stagefright FFMPEG plugin
