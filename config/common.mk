@@ -116,13 +116,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Cerberus OS Extra Packages
-PRODUCT_PACKAGES += \
-    PixelLauncher3 \
-	Lawnchair \
-	MarkupGoogle \
-	WellbeingPrebuilt
- 
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
