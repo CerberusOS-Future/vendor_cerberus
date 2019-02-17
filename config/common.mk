@@ -205,7 +205,7 @@ ifndef CERBERUS_MAINTAINER
 endif
 
 PRODUCT_GENERIC_PROPERTIES += \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.potato.overlay.lawnconf
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.cerberus.overlay.lawnconf
 
 # Set all versions
 CERBERUS_VERSION := CerberusOS_1.5-$(CERBERUS_POSTFIX)-$(CERBERUS_BUILD)-$(CERBERUS_BUILD_TYPE)
