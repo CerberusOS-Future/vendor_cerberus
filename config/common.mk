@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
 # Cerberus OS Extra Packages
 PRODUCT_PACKAGES += \
 	Lawnchair \
+	LawnConf \
 	MarkupGoogle \
 	WellbeingPrebuilt
 
@@ -129,6 +130,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
+	
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/cerberus/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -197,6 +203,9 @@ endif
 ifndef CERBERUS_MAINTAINER
     CERBERUS_MAINTAINER= USERNAME
 endif
+
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.cerberus.overlay.lawnconf
 
 # Set all versions
 CERBERUS_VERSION := CerberusOS_1.5-$(CERBERUS_POSTFIX)-$(CERBERUS_BUILD)-$(CERBERUS_BUILD_TYPE)
