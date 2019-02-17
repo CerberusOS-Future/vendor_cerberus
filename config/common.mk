@@ -99,7 +99,13 @@ PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt
-
+    
+# Cerberus OS Extra Packages
+PRODUCT_PACKAGES += \
+    PixelLauncher3 \
+	Lawnchair \
+	MarkupGoogle \
+	WellbeingPrebuilt
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -112,10 +118,8 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
-
 PRODUCT_PACKAGES += \
     charger_res_images
-
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
