@@ -98,9 +98,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
-    BluetoothExt \
-    Launcher3Dark
-
+    BluetoothExt
+    
+# Cerberus OS Extra Packages
+PRODUCT_PACKAGES += \
+	Lawnchair \
+	MarkupGoogle \
+	WellbeingPrebuilt
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -112,7 +116,6 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     ntfsfix \
     ntfs-3g
-
 
 PRODUCT_PACKAGES += \
     charger_res_images
