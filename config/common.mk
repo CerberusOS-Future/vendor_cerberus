@@ -98,8 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
-    BluetoothExt \
-    Launcher3Dark
+    BluetoothExt ]
 
 
 # Extra tools
@@ -116,6 +115,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# Cerberus OS Extra Packages
+PRODUCT_PACKAGES += \
+    PixelLauncher3 \
+	Lawnchair \
+	MarkupGoogle \
+	WellbeingPrebuilt \
+ 
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
