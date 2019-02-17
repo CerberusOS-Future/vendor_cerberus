@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
-    BluetoothExt ]
+    BluetoothExt
 
 
 # Extra tools
