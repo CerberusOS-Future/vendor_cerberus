@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     
 # Cerberus OS Extra Packages
 PRODUCT_PACKAGES += \
-    PixelLauncher3 \
 	Lawnchair \
 	MarkupGoogle \
 	WellbeingPrebuilt
