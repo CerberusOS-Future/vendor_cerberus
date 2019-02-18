@@ -85,8 +85,11 @@
         <item>com.google.android.gms</item>
     </string-array>
 	
-	<!-- Lawnstep -->
+    <!-- Lawnstep -->
     <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
-	
+
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
 </resources>
 
