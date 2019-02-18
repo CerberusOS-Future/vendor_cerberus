@@ -217,7 +217,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cerberus.version=$(CERBERUS_VERSION) \
     ro.modversion=$(CERBERUS_MOD_VERSION) \
     ro.cerberus.buildtype=$(CERBERUS_BUILD_TYPE) \
-    ro.cerberus.maintainer=$(CERBERUS_MAINTAINER)
+    ro.cerberus.maintainer=$(CERBERUS_MAINTAINER) \
     ro.cerberus.build_date=$(CERBERUS_POSTFIX)
 
 # Google sounds
