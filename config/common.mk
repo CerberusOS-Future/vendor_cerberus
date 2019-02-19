@@ -105,7 +105,8 @@ PRODUCT_PACKAGES += \
 	Lawnchair \
 	LawnConf \
 	MarkupGoogle \
-	WellbeingPrebuilt
+	WellbeingPrebuilt \
+	Recorder
 
 # Extra tools
 PRODUCT_PACKAGES += \
