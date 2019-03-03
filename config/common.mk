@@ -107,6 +107,13 @@ PRODUCT_PACKAGES += \
 	MarkupGoogle \
 	WellbeingPrebuilt \
 	Recorder
+	
+# CERBERUS Den package
+PRODUCT_PACKAGES += \
+    CerberusOSDen
+
+# CERBERUSOS theming packages
+include packages/overlays/CerberusOS/product_packages.mk
 
 # Extra tools
 PRODUCT_PACKAGES += \
