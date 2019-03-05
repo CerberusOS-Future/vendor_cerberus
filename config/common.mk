@@ -106,7 +106,8 @@ PRODUCT_PACKAGES += \
 	LawnConf \
 	MarkupGoogle \
 	WellbeingPrebuilt \
-	Recorder
+	Recorder \
+	OmniRecord
 	
 # CERBERUS Den package
 PRODUCT_PACKAGES += \
