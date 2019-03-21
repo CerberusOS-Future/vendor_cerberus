@@ -83,4 +83,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.config.ringtone=The_big_adventure.ogg \
    ro.config.notification_sound=Duet.ogg \
-   ro.config.alarm_alert=Sunshower.ogg
+   ro.config.alarm_alert=Hassium.ogg
