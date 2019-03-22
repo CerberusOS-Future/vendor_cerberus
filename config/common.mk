@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
 # Cerberus OS Extra Packages
 PRODUCT_PACKAGES += \
 	Lawnchair \
+	CameraRoll \
+	MiXplorerPrebuilt \
+	MusicPlayer \
 	LawnConf \
 	MarkupGoogle \
 	WellbeingPrebuilt \

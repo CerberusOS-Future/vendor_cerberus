@@ -70,3 +70,36 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
+
+
+ #CameraRoll
+include $(CLEAR_VARS)
+LOCAL_MODULE := CameraRoll
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
+LOCAL_SRC_FILES := common/app/CameraRoll.apk
+LOCAL_OVERRIDES_PACKAGES := Gallery Gallery3D GalleryNew3D Gallery2
+include $(BUILD_PREBUILT)
+
+#FileManager App
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiXplorerPrebuilt
+LOCAL_SRC_FILES := common/app/MiXplorerPrebuilt.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_OVERRIDES_PACKAGES := CMFileManager Amaze AmazeFM crDroidFileManager
+include $(BUILD_PREBUILT)
+
+#Music App
+include $(CLEAR_VARS)
+LOCAL_MODULE := MusicPlayer
+LOCAL_SRC_FILES := common/app/MusicPlayer.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_OVERRIDES_PACKAGES := Music SnapdragonMusic crDroidMusic Phonograph Eleven VanillaMusic
+include $(BUILD_PREBUILT)
