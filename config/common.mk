@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt
-    
+
 # Cerberus OS Extra Packages
 PRODUCT_PACKAGES += \
 	Lawnchair \
@@ -107,10 +107,11 @@ PRODUCT_PACKAGES += \
 	MusicPlayer \
 	LawnConf \
 	MarkupGoogle \
+        GDeskClock \
 	WellbeingPrebuilt \
 	Recorder \
 	OmniRecord
-	
+
 # CERBERUS Den package
 PRODUCT_PACKAGES += \
     CerberusOSDen
