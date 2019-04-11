@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
 	WellbeingPrebuilt \
 	Recorder \
 	OmniRecord
+        ForceStop 
 
 # CERBERUS Den package
 PRODUCT_PACKAGES += \
