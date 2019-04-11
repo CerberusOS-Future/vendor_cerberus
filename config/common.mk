@@ -110,9 +110,8 @@ PRODUCT_PACKAGES += \
         GDeskClock \
 	WellbeingPrebuilt \
 	Recorder \
-	OmniRecord \
-   ForceStop \
-   ViaBrowser 
+	OmniRecord
+        ForceStop 
 
 # CERBERUS Den package
 PRODUCT_PACKAGES += \
