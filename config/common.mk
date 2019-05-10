@@ -18,6 +18,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
+#Some Permissions
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
+
 # Backup tool
 PRODUCT_COPY_FILES += \
     vendor/cerberus/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -142,7 +146,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
-	
+
 # Lawnchair
 PRODUCT_COPY_FILES += \
     vendor/cerberus/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
@@ -192,8 +196,8 @@ ifndef CERBERUS_BUILD_TYPE
     CERBERUS_BUILD_TYPE := UNOFFICIAL
 endif
 
-ifndef CERBERUS_MAINTAINER	
-    CERBERUS_MAINTAINER := USERNAME	
+ifndef CERBERUS_MAINTAINER
+    CERBERUS_MAINTAINER := USERNAME
 endif
 
 PRODUCT_GENERIC_PROPERTIES += \
