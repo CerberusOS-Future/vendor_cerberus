@@ -116,13 +116,13 @@ include $(BUILD_PREBUILT)
 
 #Google Calculator
 include $(CLEAR_VARS)
-LOCAL_MODULE := Calculator
+LOCAL_MODULE := GCalculator
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := common/app/Calculator.apk
+LOCAL_SRC_FILES := common/app/GCalculator/GCalculator.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := .apk
 LOCAL_OVERRIDES_PACKAGES := ExactCalculator
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 #Gboard App
