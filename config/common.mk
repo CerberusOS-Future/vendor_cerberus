@@ -187,23 +187,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.ime.height_ratio=1.05 \
     ro.com.google.ime.emoji_key=false
 
-# Versioning System
-PRODUCT_VERSION_MAJOR = 1
-PRODUCT_VERSION_MINOR = 7
-PRODUCT_VERSION_MAINTENANCE = 1.7
-CERBERUS_POSTFIX := $(shell date +"%Y%m%d")
-ifdef CERBERUS_BUILD_EXTRA
-    CERBERUS_POSTFIX := $(CERBERUS_BUILD_EXTRA)
-endif
-
-ifndef CERBERUS_BUILD_TYPE
-    CERBERUS_BUILD_TYPE := UNOFFICIAL
-endif
-
-ifndef CERBERUS_MAINTAINER
-    CERBERUS_MAINTAINER := USERNAME
-endif
-
 PRODUCT_GENERIC_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.cerberus.overlay.lawnconf
 	
@@ -221,18 +204,8 @@ PRODUCT_COPY_FILES += \
     vendor/cerberus/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
-# Set all versions
-CERBERUS_VERSION := CerberusOS-1.7-$(CERBERUS_POSTFIX)-Pie4-$(CERBERUS_BUILD)-$(CERBERUS_BUILD_TYPE)
-CERBERUS_MOD_VERSION := CerberusOS-1.7-$(CERBERUS_POSTFIX)-Pie4-$(CERBERUS_BUILD)-$(CERBERUS_BUILD_TYPE)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    BUILD_DISPLAY_ID=$(BUILD_ID) \
-    cerberus.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.cerberus.version=$(CERBERUS_VERSION) \
-    ro.modversion=$(CERBERUS_MOD_VERSION) \
-    ro.cerberus.buildtype=$(CERBERUS_BUILD_TYPE) \
-    ro.cerberus.maintainer=$(CERBERUS_MAINTAINER) \
-    ro.cerberus.build_date=$(CERBERUS_POSTFIX)
+# Versioning System
+include vendor/cerberus/config/version.mk
 
 # Google sounds
 include vendor/cerberus/google/GoogleAudio.mk
