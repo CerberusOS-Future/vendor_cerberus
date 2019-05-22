@@ -202,6 +202,20 @@ endif
 
 PRODUCT_GENERIC_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.cerberus.overlay.lawnconf
+	
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/cerberus/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/cerberus/prebuilt/common/bin/50-cerberus.sh:system/addon.d/50-cerberus.sh \
+    vendor/cerberus/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
+ ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/cerberus/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/cerberus/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/cerberus/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
 
 # Set all versions
 CERBERUS_VERSION := CerberusOS-1.7-$(CERBERUS_POSTFIX)-Pie4-$(CERBERUS_BUILD)-$(CERBERUS_BUILD_TYPE)
