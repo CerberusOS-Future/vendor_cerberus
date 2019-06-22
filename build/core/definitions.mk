@@ -5,5 +5,8 @@ define uniq
 $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
 endef
 
-# Include QCOM macros
-include vendor/cerberus/build/core/qcom_utils.mk
+# Include board/platform macros
+include vendor/cerberus/build/core/utils.mk
+
+# Include vendor platform definitions
+include vendor/cerberus/build/core/vendor/*.mk
